@@ -1,88 +1,142 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
-:root{
-    --cor1:hsl(233, 47%, 7%);
-    --cor2:hsl(244, 38%, 16%);
-    --cor3:#aa5cdb;
-    --HeadingCor:hsl(0, 0%, 100%);
-    --ParagraphCor:hsla(0, 0%, 100%, 0.75);
-    --StatsHDCOr:hsla(0, 0%, 100%, 0.6);
+:root {
+    --cor1: hsl(233, 47%, 7%);
+    --cor2: hsl(244, 38%, 16%);
+    --cor3: #aa5cdb;
+    --HeadingCor: hsl(0, 0%, 100%);
+    --ParagraphCor: hsla(0, 0%, 100%, 0.75);
+    --StatsHDCOr: hsla(0, 0%, 100%, 0.6);
 
 }
 
-*{ margin: 0px; padding: 0px; }
-
-@media (min-width:360px) and (max-width:1439px){
-body{
-    background-color: var(--cor1);
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-main{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 70px;
-    width: 250px;
-    height: 600px;
-    background-color: var(--cor2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 20px;
-}
+@media (min-width:360px) and (max-width:1439px) {
+    body {
+        background-color: var(--cor1);
+    }
+
+    main {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        margin-left: 20px;
+        width: 250px;
+        height: 600px;
+        background-color: var(--cor2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 20px;
+    }
 
 
-main>#Card_text{
-    text-align: center;
-    font-size: 15px;
-}
-main>#Card_text>h1{
-    color: var(--HeadingCor);
-    font-size: 24px;
-    font-weight: 700;
-    font-family: 'Inter','Times New Roman', Times, serif  ;
-    margin-bottom: 20px;
-}
-main>#Card_text>h1>span{
-    color: var(--cor3);
-}
-main>#Card_text>p{
-    font-weight: 400;
-    font-family: 'Lexend Deca',Arial, Helvetica, sans-serif;
-    margin-bottom:40px ;
-    font-size: 15px;
-    color: hsla(0, 0%, 100%, 0.75);
+    main>#Card_text {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    main>#Card_text>h1 {
+        color: var(--HeadingCor);
+        font-size: 24px;
+        font-weight: 700;
+        font-family: 'Inter', 'Times New Roman', Times, serif;
+        margin-bottom: 20px;
+    }
+
+    main>#Card_text>h1>span {
+        color: var(--cor3);
+    }
+
+    main>#Card_text>p {
+        font-weight: 400;
+        font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+        margin-bottom: 40px;
+        font-size: 15px;
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+
+    main>#Card_img {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    main>#Card_img>img {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    main>#Card_text>#flex_card>.text_Card {
+        text-align: center;
+        margin-bottom: 20px;
+        color: var(--StatsHDCOr);
+    }
+
+    main>#Card_text>#flex_card>.text_Card>span {
+        display: inline;
+        font-weight: 700;
+        font-family: 'Inter', 'Times New Roman', Times, serif;
+        color: var(--HeadingCor);
+    }
+
 }
 
-main>#Card_img{
-    border-radius: 10px 10px 0px 0px;
-}
-main>#Card_img>img{
-    border-radius: 10px 10px 0px 0px;
-}
-main>#Card_text>#flex_card>.text_Card{
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--StatsHDCOr);
-}
-main>#Card_text>#flex_card>.text_Card>span{
-    display: inline;
-    font-weight: 700;
-    font-family:'Inter','Times New Roman', Times, serif;
-    color: var(--HeadingCor);
-}
+@media all and (orientation:landscape) and (min-width:350px) and (max-width:1388px) {
+    .containerCard {
+        display: flex;
+        flex-direction: row;
+        width: 95vw;
+        height: 92vh;
+    }
+
+    #Card_img {
+        width: 90vw;
+        height: 92vh;
+        background-image: url('../src/image-header-desktop_violet2.jpg');
+        background-position: center center;
+    }
+
+    #Card_text {
+        padding: 5px;
+        width: 70vw;
+        margin-right: 0px;
+    }
+
+    #Card_text>h1 {
+        font-size: 2vh;
+    }
+
+    #Card_text>p {
+        font-size: 1vh;
+    }
+
+    main>#Card_text>p {
+        margin-bottom: 20px;
+    }
+
+    main>#Card_text>#flex_card>.text_Card {
+        margin-bottom: 12px;
+        font-size: 5vh;
+    }
+
+    .img_card {
+        display: none;
+    }
+
 }
 
 /*======================================================================================================================
 ========================================================================================================================
 ========================================================================================================================= */
 
-@media (min-width:1350px){
-    body{
+@media (min-width:1350px) {
+    body {
         background-color: var(--cor1);
     }
-    
-    main{
+
+    main {
         margin-top: 100px;
         margin-bottom: 40px;
         margin-left: 200px;
@@ -94,71 +148,79 @@ main>#Card_text>#flex_card>.text_Card>span{
         justify-content: space-between;
         border-radius: 10px 30px 30px 10px;
     }
-    
-    
-    main>#Card_text{
+
+
+    main>#Card_text {
         text-align: center;
         font-size: 15px;
     }
-    main>#Card_text>h1{
+
+    main>#Card_text>h1 {
         color: var(--HeadingCor);
         font-size: 30px;
         font-weight: 700;
-        font-family: 'Inter','Times New Roman', Times, serif  ;
+        font-family: 'Inter', 'Times New Roman', Times, serif;
         margin-top: 40px;
         margin-bottom: 20px;
     }
-    main>#Card_text{
+
+    main>#Card_text {
         text-align: center;
         font-size: 15px;
     }
-    main>#Card_text>p{
+
+    main>#Card_text>p {
         margin-left: 30px;
         text-align: left;
         font-weight: 400;
-        font-family: 'Lexend Deca',Arial, Helvetica, sans-serif;
-        margin-bottom:40px ;
+        font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+        margin-bottom: 40px;
         font-size: 15px;
         color: hsla(0, 0%, 100%, 0.75);
     }
-    
-    main>#Card_img{
+
+    main>#Card_img {
         border-radius: 10px 10px 0px 0px;
         height: 447px;
     }
-    main>#Card_img>img{
+
+    main>#Card_img>img {
 
         border-radius: 0px 20px 20px 0px;
     }
-    main>#Card_text>#flex_card{
+
+    main>#Card_text>#flex_card {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
-    main>#Card_text>#flex_card>.text_Card{
+
+    main>#Card_text>#flex_card>.text_Card {
         font-size: 20px;
         margin-top: 30px;
         text-align: center;
         margin-bottom: 20px;
         color: var(--StatsHDCOr);
     }
-    main>#Card_text>#flex_card>.text_Card>span{
+
+    main>#Card_text>#flex_card>.text_Card>span {
         font-size: 30px;
         display: inline;
         font-weight: 700;
-        font-family:'Inter','Times New Roman', Times, serif;
+        font-family: 'Inter', 'Times New Roman', Times, serif;
         color: var(--HeadingCor);
     }
 }
+
 /*=======================================================================================================
 =========================================================================================================
 ========================================================================================================= */
-@media (min-width:1440px){
-    body{
+@media (min-width:1440px) {
+    body {
         background-color: var(--cor1);
     }
-    
-    main{
+
+    main {
         margin-top: 200px;
         margin-bottom: 40px;
         margin-left: 200px;
@@ -170,60 +232,68 @@ main>#Card_text>#flex_card>.text_Card>span{
         justify-content: space-between;
         border-radius: 10px 30px 30px 10px;
     }
-    
-    
-    main>#Card_text{
+
+
+    main>#Card_text {
         text-align: center;
         font-size: 15px;
     }
-    main>#Card_text>h1{
+
+    main>#Card_text>h1 {
         color: var(--HeadingCor);
         font-size: 30px;
         font-weight: 700;
-        font-family: 'Inter','Times New Roman', Times, serif  ;
+        font-family: 'Inter', 'Times New Roman', Times, serif;
         margin-top: 40px;
         margin-bottom: 20px;
     }
-    main>#Card_text{
+
+    main>#Card_text {
         text-align: center;
         font-size: 15px;
     }
-    main>#Card_text>h1>span{
+
+    main>#Card_text>h1>span {
         color: var(--cor3);
     }
-    main>#Card_text>p{
+
+    main>#Card_text>p {
         font-weight: 400;
-        font-family: 'Lexend Deca',Arial, Helvetica, sans-serif;
-        margin-bottom:40px ;
+        font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+        margin-bottom: 40px;
         font-size: 15px;
         color: hsla(0, 0%, 100%, 0.75);
     }
-    
-    main>#Card_img{
+
+    main>#Card_img {
         border-radius: 10px 10px 0px 0px;
         height: 447px;
     }
-    main>#Card_img>img{
+
+    main>#Card_img>img {
 
         border-radius: 0px 20px 20px 0px;
     }
-    main>#Card_text>#flex_card{
+
+    main>#Card_text>#flex_card {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
-    main>#Card_text>#flex_card>.text_Card{
+
+    main>#Card_text>#flex_card>.text_Card {
         font-size: 20px;
         margin-top: 30px;
         text-align: center;
         margin-bottom: 20px;
         color: var(--StatsHDCOr);
     }
-    main>#Card_text>#flex_card>.text_Card>span{
+
+    main>#Card_text>#flex_card>.text_Card>span {
         font-size: 30px;
         display: inline;
         font-weight: 700;
-        font-family:'Inter','Times New Roman', Times, serif;
+        font-family: 'Inter', 'Times New Roman', Times, serif;
         color: var(--HeadingCor);
     }
 
